@@ -401,7 +401,6 @@ if (message.content === '$help') {
       .addField("**۩ஜ▬▬▬▬▬▬✦أوامر الالعاب✦▬▬▬▬▬▬ஜ۩**","** **")
       .addField("**❖ $sara7a**","**لعبة صراحه**")
       .addField("**❖ $rps**","**لعبة حجرة ورقة مقص**")
-      .addField("**❖ $[Soon]**","**لعبة كت  تويت**")
       .addField("**۩ஜ▬▬▬▬▬▬✦Info✦▬▬▬▬▬▬ஜ۩**","** **")
       .addField("**❖ --->**","**Made By : Stars NetWork**")
       .addField("**❖ --->**","**Bot Server :https://discord.gg/sUwAjs4**")
