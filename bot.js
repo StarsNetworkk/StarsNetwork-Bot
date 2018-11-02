@@ -39,7 +39,7 @@ client.user.setGame(`صيآنة`,"http://twitch.tv/S-F")
 
 client.on('ready', function(){    
     var ms = 40000 ;    
-    var setGame = [`Made By : Mdax`,"$help"];    
+    var setGame = [`The Legend Of Stars NetWork `,"$help"];    
     var i = -1;    
     var j = 0;    
     setInterval(function (){    
@@ -403,8 +403,8 @@ if (message.content === '$help') {
       .addField("**❖ $rps**","**لعبة حجرة ورقة مقص**")
       .addField("**❖ $[Soon]**","**لعبة كت  تويت**")
       .addField("**۩ஜ▬▬▬▬▬▬✦Info✦▬▬▬▬▬▬ஜ۩**","** **")
-      .addField("**❖ --->**","**Made By : ! - Mdax .#0518**")
-      .addField("**❖ --->**","**Bot Server :https://discord.gg/Y9x7zqe**")
+      .addField("**❖ --->**","**Made By : Stars NetWork**")
+      .addField("**❖ --->**","**Bot Server :https://discord.gg/sUwAjs4**")
 
     .setColor('#e9ab26')
   message.author.sendEmbed(embed);
@@ -541,7 +541,7 @@ var args = message.content.split(" ").slice(1);
     if(command == "mute") {
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!tomute) return message.reply("**يجب عليك المنشن اولاّ**:x: ") .then(m => m.delete(5000));
-    if(tomute.hasPermission("MANAGE_MESSAGES"))return      message.channel.send('**I LOve Mdax77x`');
+    if(tomute.hasPermission("MANAGE_MESSAGES"))return      message.channel.send('**تم إسكاتة`');
     let muterole = message.guild.roles.find(`name`, "Muted");
     //start of create role
     if(!muterole){
@@ -610,7 +610,7 @@ embed: new Discord.RichEmbed()
    .setAuthor(client.user.username,client.user.avatarURL)
    .setThumbnail(client.user.avatarURL)
    .setColor('RANDOM')
-   .setTitle('``xR1`` ')
+   .setTitle('``StarsNetWork`` ')
    .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
    .addField('``servers``', [client.guilds.size], true)
    .addField('``channels``' , `[ ${client.channels.size} ]` , true)
@@ -620,7 +620,7 @@ embed: new Discord.RichEmbed()
          .addField('``My Prefix``' , `[ $ ]` , true)
          .addField('``My Language``' , `[ JavaScript ]` , true)
          .addField('``Bot Version``' , `[ v0.1 ]` , true)
-         .setFooter('By | <@! - Mdax .#0518 >')
+         .setFooter('By | <StarsNetWork >')
 })
 }
 });
@@ -853,7 +853,7 @@ hours = 12;
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "xR1 Server";
+    let copy = "StarsNetwork";
     let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
     msg.react('✅')
