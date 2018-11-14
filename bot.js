@@ -271,7 +271,6 @@ if (message.content.startsWith('$sara7a')) {
 const bannedwords = [
     "كل زق",
     "كس",
-    "كس امك",
     "الله يلعن",
     "قحبه",
     "خنيث"
