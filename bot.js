@@ -269,11 +269,11 @@ if (message.content.startsWith('$sara7a')) {
 });
 
 const bannedwords = [
-    "كل زق",
-    "كس",
-    "الله يلعن",
-    "قحبه",
-    "خنيث"
+    "",
+    "",
+    "",
+    "",
+    ""
 
   ];
 
