@@ -887,7 +887,7 @@ if(!message.guild) return
   role: '[The-legend] {♡♡}'
   }
  
-if(message.content.startsWith(`!autorole`)) {
+if(message.content.startsWith(`$autorole`)) {
          
   let perms = message.member.hasPermission(`MANAGE_ROLES`)
  
@@ -900,7 +900,7 @@ if(message.content.startsWith(`!autorole`)) {
     if(ar[message.guild.id].onoff === 'Off') return [message.channel.send(`**The Autorole Is __𝐎𝐍__ !**`), ar[message.guild.id].onoff = 'On']
     if(ar[message.guild.id].onoff === 'On') return [message.channel.send(`**The Autorole Is __𝐎𝐅𝐅__ !**`), ar[message.guild.id].onoff = 'Off']
    }
-  if(state.trim().toLowerCase() == 'set') {
+  if(state.trim().toLowerCase() == '$set') {
   let newRole = message.content.split(" ").slice(2).join(" ")
   if(!newRole) return message.reply(`${prefix}autorole set [[The-legend] {♡♡}]`)
     if(!message.guild.roles.find(`name`,newRole)) return message.reply(`I Cant Find This Role.`)
@@ -908,7 +908,7 @@ if(message.content.startsWith(`!autorole`)) {
     message.channel.send(`**The AutoRole Has Been Changed to ${newRole}.**`)
   }
         }
-if(message.content === '!info') {
+if(message.content === '$info') {
    let perms = message.member.hasPermission(`MANAGE_GUILD`)
    if(!perms) return message.reply(`You don't have permissions.`)
     var embed = new Discord.RichEmbed()
