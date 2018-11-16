@@ -327,7 +327,7 @@ client.on('message', msg => {
   if(msg.content === '$unhide') {
     msg.guild.channels.forEach(c => {
       c.overwritePermissions(msg.guild.id, {
-        SEND_MESSAGES: true,
+        SEND_MESSAGES: false,
         READ_MESSAGES: true
       })
     })
