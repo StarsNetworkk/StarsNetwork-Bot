@@ -884,31 +884,31 @@ client.on('message', message => {
 if(!message.guild) return
   if(!ar[message.guild.id]) ar[message.guild.id] = {
   onoff: 'Off',
-  role: '[The-legend] {♡♡}'
+  role: '═══▣『The-legend♡♡』▣═══'
   }
  
-if(message.content.startsWith(`$autorole`)) {
+if(message.content.startsWith(`!autorole`)) {
          
   let perms = message.member.hasPermission(`MANAGE_ROLES`)
  
   if(!perms) return message.reply(`You don't have permissions, required permission : Manage Roles.`)
  let args = message.content.split(" ").slice(1)
- if(!args.join(" ")) return message.reply(`${prefix}autorole toggle / set [[The-legend] {♡♡}]`)
+ if(!args.join(" ")) return message.reply(`${prefix}autorole toggle / set [═══▣『The-legend♡♡』▣═══]`)
  let state = args[0]
  if(!state.trim().toLowerCase() == 'toggle' || !state.trim().toLowerCase() == 'setrole') return message.reply(`Please type a right state, ${prefix}modlogs toggle/setrole [ROLE NAME]`)
    if(state.trim().toLowerCase() == 'toggle') {
     if(ar[message.guild.id].onoff === 'Off') return [message.channel.send(`**The Autorole Is __𝐎𝐍__ !**`), ar[message.guild.id].onoff = 'On']
     if(ar[message.guild.id].onoff === 'On') return [message.channel.send(`**The Autorole Is __𝐎𝐅𝐅__ !**`), ar[message.guild.id].onoff = 'Off']
    }
-  if(state.trim().toLowerCase() == '$set') {
+  if(state.trim().toLowerCase() == 'set') {
   let newRole = message.content.split(" ").slice(2).join(" ")
-  if(!newRole) return message.reply(`${prefix}autorole set [[The-legend] {♡♡}]`)
+  if(!newRole) return message.reply(`${prefix}autorole set [═══▣『The-legend♡♡』▣═══]`)
     if(!message.guild.roles.find(`name`,newRole)) return message.reply(`I Cant Find This Role.`)
    ar[message.guild.id].role = newRole
     message.channel.send(`**The AutoRole Has Been Changed to ${newRole}.**`)
   }
         }
-if(message.content === '$info') {
+if(message.content === '!info') {
    let perms = message.member.hasPermission(`MANAGE_GUILD`)
    if(!perms) return message.reply(`You don't have permissions.`)
     var embed = new Discord.RichEmbed()
@@ -929,6 +929,7 @@ Role : __${ar[message.guild.id].role}__`)
  
  
 });
+
 
 
 
