@@ -450,19 +450,7 @@ reaction3.on("collect", r => {
 
 
 
-client.on('message', function(message) {
-    if (message.channel.type === "dm") {
-        if (message.author.id === client.user.id) return;
-        var stewart = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setTimestamp()
-            .setTitle('``رساله جديده في خاص البوت``')
-            .setThumbnail(`${message.author.avatarURL}`)
-            .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
-            .setFooter(`من (@${message.author.tag})  |  (${message.author.id})`)
-        client.channels.get("501121173598371844").send({ embed: stewart });
-    }
-});
+
 
 
 client.on('message', message => {
@@ -933,7 +921,8 @@ Role : __${ar[message.guild.id].role}__`)
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("513065026907537410");
+        guild = client.guilds.get("494920525051592705");
+        client.channels.get("513065026907537410").send({ embed: stewart });
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
